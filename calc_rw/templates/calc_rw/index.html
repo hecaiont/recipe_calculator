@@ -6,26 +6,29 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 <body>
+<div class="container">
 <div class="page-header">
+    <br>
     <h1>가양주 만들 때 필요한 몇가지 계산 <small>beta 1.0</small></h1>
     </div>
-
     <hr>
+    <br>
+</div>
 
 <div class="container">
     <h3>1. 술에 물을 넣어서 알콜 도수를 낮출 때 <small>(L)</small></h3>
     <div class="row">        
-        <div class="col-xs-4">
+        <div class="col-lg-4">
             <label>현재 도수(%) :        </label>
             <div class="input-group">
             <input id="id_1_1" type="number" class="form-control"></div>
         </div>
-        <div class="col-xs-4">
+        <div class="col-lg-4">
             <label>원하는 도수(%) :</label>
             <div class="input-group">
             <input id="id_1_2" type="number" class="form-control"></div>
         </div>
-        <div class="col-xs-4">
+        <div class="col-lg-4">
             <label>술의 양(L) :</label>
             <div class="input-group">
             <input id="id_1_3" type="number" class="form-control"></div>
@@ -41,31 +44,32 @@
         </div>
         </div>
     </div>
+    <hr>
+
 </div>
 
-<hr>
 
 <div class="container">
     <h3>2. 두가지 술을 혼합할 때</h3>
         <div class="row">
-            <div class="col-xs-6">
+            <div class="col-lg-6">
                 <label>술A의 도수(%):</label>
                 <div class="input-group">
                 <input id="id_2_1" type="number" class="form-control"></div>
             </div>
-            <div class="col-xs-6">
+            <div class="col-lg-6">
                 <label>술B의 도수(%):</label>
                 <div class="input-group">
                 <input id="id_2_3" type="number" class="form-control"></div>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-6">
+            <div class="col-lg-6">
                 <label>원하는 도수(%):</label>
                 <div class="input-group">
                 <input id="id_2_2" type="number" class="form-control"></div>
             </div>
-            <div class="col-xs-6">
+            <div class="col-lg-6">
                 <label>전체 술의 양(L):</label>
                 <div class="input-group">
                 <input id="id_2_4" type="number" class="form-control"></div>
@@ -77,39 +81,40 @@
             </div>
             </div>
         <div class="row">
-            <div class="col-xs-6">
+            <div class="col-lg-6">
                 <div class="card-body">
                     술A의 양(L) : <span id="an_2_1"></span>
                 </div>
             </div>
-            <div class="col-xs-6">
+            <div class="col-lg-6">
                 <div class="card-body">
                     술B의 양(L) : <span id="an_2_2"></span>
                 </div>
             </div>
         </div>
+   <hr>
+     
 </div>
 
-<hr>
 
 <div class="container">
     <h3>3. 과실주 만들 때 당도를 높여야 할 때 <small>(Kg)</small></h3>
     <div class="row">
-        <div class="col-xs-6">
+        <div class="col-lg-6">
         <label>현재 당도(Brix):</label>
         <div class="input-group">
         <input id="id_3_1" type="number" class="form-control"></div></div>
-        <div class="col-xs-6">
+        <div class="col-lg-6">
         <label>원하는 당도(Brix):</label>
         <div class="input-group">
         <input id="id_3_2" type="number" class="form-control"></div></div>
     </div>
     <div class="row">
-        <div class="col-xs-6">
+        <div class="col-lg-6">
         <label>과실의 양(L):</label>
         <div class="input-group">
         <input id="id_3_3" type="number" class="form-control"></div></div>
-        <div class="col-xs-6">
+        <div class="col-lg-6">
         <label>과실의 수분 함량:</label>
         <div class="input-group">
         <input id="id_3_4" type="number" class="form-control"></div>
@@ -127,19 +132,20 @@
         </div>
     </div>
     </div>
+  <hr>
+  
 </div>
 
-<hr>
 
 <div class="container">
     <h3>4. 당도가 높은 청에 물을 넣을 때 <small>(L)</small></h3>
     <div class="row">
-        <div class="col-xs-6">
+        <div class="col-lg-6">
         <label>현재 당도(Brix):</label>
         <div class="input-group">    
         <input id="id_4_1" type="number" class="form-control"></div>
         </div>
-        <div class="col-xs-6">
+        <div class="col-lg-6">
         <label>원하는 당도(Brix):</label>
         <div class="input-group">    
         <input id="id_4_2" type="number" class="form-control"></div>
@@ -162,56 +168,57 @@
             </div>
         </div>
     </div>
+    <hr>
+
 </div>
 
-<hr>
 
 <div class="container">
 
 <h3>5. 두가지 이상의 술을 섞을 때 <small>(%)</small></h3>
 <div class="row">
-        <div class="col-xs-6">
+        <div class="col-lg-6">
             <label>A양(L)</label>
             <div class="input-group">
             <input id="id_5_A1" type="number" class="form-control"></div>
         </div>
-        <div class="col-xs-6">
+        <div class="col-lg-6">
             <label>A알콜 도수(%)</label>
             <div class="input-group">
             <input id="id_5_A2" type="number" class="form-control"></div>
         </div>
     </div>
 <div class="row">
-        <div class="col-xs-6">
+        <div class="col-lg-6">
             <label>B양(L)</label>
             <div class="input-group">
             <input id="id_5_B1" type="number" class="form-control"></div>
         </div>
-            <div class="col-xs-6">
+            <div class="col-lg-6">
             <label>B알콜 도수(%)</label>
             <div class="input-group">
             <input id="id_5_B2" type="number" class="form-control"></div>
         </div>
     </div>
 <div class="row">
-        <div class="col-xs-6">
+        <div class="col-lg-6">
             <label>C양(L)</label>
             <div class="input-group">
             <input id="id_5_C1" type="number" class="form-control"></div>
         </div>
-            <div class="col-xs-6">
+            <div class="col-lg-6">
             <label>C알콜 도수(%)</label>
             <div class="input-group">
             <input id="id_5_C2" type="number" class="form-control"></div>
         </div>
     </div>
 <div class="row">
-        <div class="col-xs-6">
+        <div class="col-lg-6">
             <label>D양(L)</label>
             <div class="input-group">
             <input id="id_5_D1" type="number" class="form-control"></div>
         </div>
-        <div class="col-xs-6">
+        <div class="col-lg-6">
             <label>D알콜 도수(%)</label>
             <div class="input-group">
             <input id="id_5_D2" type="number" class="form-control"></div>
@@ -236,8 +243,9 @@
             </div>
         </div>
     </div>
+   <hr>
+ 
 </div>
-<hr>
 
 <script>
 function fun_1(){
