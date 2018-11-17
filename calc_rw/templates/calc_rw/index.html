@@ -1,5 +1,24 @@
 <html>
-
+<style>
+html {
+    font-size: 1rem;
+}
+@include media-breakpoint-up(sm) {  
+  html {
+    font-size: 1.2rem;
+  } 
+}
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+}
+</style>
 <head>
     <title>술 계산 모음</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -8,16 +27,16 @@
 <body>
 <div class="container">
 <div class="page-header">
-    <br>
-    <h1>가양주 만들 때 필요한 몇가지 계산 <small>beta 1.0</small></h1>
+    
+    <h1 class="display-5">가양주 만들 때 필요한 몇가지 계산 <small>beta 1.0</small></h1>
     </div>
     <hr>
-    <br>
+    
 </div>
 
 <div class="container">
     <h3>1. 술에 물을 넣어서 알콜 도수를 낮출 때 <small>(L)</small></h3>
-    <div class="row">        
+    <div class="row p-2">        
         <div class="col-lg-4">
             <label>현재 도수(%) :        </label>
             <div class="input-group">
@@ -34,14 +53,16 @@
             <input id="id_1_3" type="number" class="form-control"></div>
         </div>
     </div>
-    <div class="row">
+    <div class="row p-2">
         <div class="col-lg-6" >
-            <br><button class="btn btn-default btn-block btn-lg" onclick=fun_1()>계산</button>
-        </div>
+            <div class="btn-group btn-block btn-lg">
+            <button class="btn btn-dark btn-block btn-lg" onclick=fun_1()>계산</button>
+        </div></div>
         <div class="col-lg-6" >
+                <div class="card">
         <div class="card-body" >
             술에 넣어야 하는 물의 양(L) : <span id="an_1"></span>
-        </div>
+        </div></div>
         </div>
     </div>
     <hr>
@@ -51,7 +72,7 @@
 
 <div class="container">
     <h3>2. 두가지 술을 혼합할 때</h3>
-        <div class="row">
+        <div class="row p-2">
             <div class="col-lg-6">
                 <label>술A의 도수(%):</label>
                 <div class="input-group">
@@ -63,7 +84,7 @@
                 <input id="id_2_3" type="number" class="form-control"></div>
             </div>
         </div>
-        <div class="row">
+        <div class="row p-2">
             <div class="col-lg-6">
                 <label>원하는 도수(%):</label>
                 <div class="input-group">
@@ -75,21 +96,24 @@
                 <input id="id_2_4" type="number" class="form-control"></div>
             </div>
         </div>
-        <div class="row">
+        <div class="row p-2">
                 <div class="col-lg-12">
-                <br><button class="btn btn-default btn-block btn-lg" onclick=fun_2()>계산</button>
+                <div class="btn-group btn-block btn-lg">
+                    <button class="btn btn-dark btn-block btn-lg" onclick=fun_2()>계산</button>
+            </div></div>
             </div>
-            </div>
-        <div class="row">
+        <div class="row p-2">
             <div class="col-lg-6">
+                <div class="card">
                 <div class="card-body">
                     술A의 양(L) : <span id="an_2_1"></span>
-                </div>
+                </div></div>
             </div>
             <div class="col-lg-6">
+                <div class="card">
                 <div class="card-body">
                     술B의 양(L) : <span id="an_2_2"></span>
-                </div>
+                </div></div>
             </div>
         </div>
    <hr>
@@ -99,7 +123,7 @@
 
 <div class="container">
     <h3>3. 과실주 만들 때 당도를 높여야 할 때 <small>(Kg)</small></h3>
-    <div class="row">
+    <div class="row p-2">
         <div class="col-lg-6">
         <label>현재 당도(Brix):</label>
         <div class="input-group">
@@ -109,7 +133,7 @@
         <div class="input-group">
         <input id="id_3_2" type="number" class="form-control"></div></div>
     </div>
-    <div class="row">
+    <div class="row p-2">
         <div class="col-lg-6">
         <label>과실의 양(L):</label>
         <div class="input-group">
@@ -120,15 +144,16 @@
         <input id="id_3_4" type="number" class="form-control"></div>
     </div>
 </div>
-    <div class="row">
+    <div class="row p-2">
         <div class="col-lg-6" >
-            <br><button class="btn btn-default btn-block btn-lg" onclick=fun_3()>계산</button>
-        </div>
+            <div class="btn-group btn-block btn-lg">
+            <button class="btn btn-dark btn-block btn-lg" onclick=fun_3()>계산</button>
+        </div></div>
         <div class="col-lg-6" >
-    <div class="row">
-            <div class="card-body">
+        <div class="card">    
+        <div class="card-body">
                 설탕량(kg) : <span id="an_3"></span>
-            </div>
+            </div></div>
         </div>
     </div>
     </div>
@@ -139,7 +164,7 @@
 
 <div class="container">
     <h3>4. 당도가 높은 청에 물을 넣을 때 <small>(L)</small></h3>
-    <div class="row">
+    <div class="row p-2">
         <div class="col-lg-6">
         <label>현재 당도(Brix):</label>
         <div class="input-group">    
@@ -151,21 +176,23 @@
         <input id="id_4_2" type="number" class="form-control"></div>
         </div>
     </div>
-    <div class="row">
+    <div class="row p-2">
         <div class="col-lg-6" >
         <label>중량(L):</label>
         <div class="input-group">    
         <input id="id_4_3" type="number" class="form-control"></div>
         </div>
         <div class="col-lg-6" >
-            <br><button class="btn btn-default btn-block btn-lg" onclick=fun_4()>계산</button>
-        </div>
+            <div class="btn-group btn-block btn-lg">
+            <button class="btn btn-dark btn-block btn-lg" onclick=fun_4()>계산</button>
+        </div></div>
     </div>
-    <div class="row">
+    <div class="row p-2">
         <div class="col-lg-12" >
+            <div class="card">
             <div class="card-body">
             청에 넣어야 할 물의 양(L) : <span id="an_4"></span>
-            </div>
+            </div></div>
         </div>
     </div>
     <hr>
@@ -176,7 +203,7 @@
 <div class="container">
 
 <h3>5. 두가지 이상의 술을 섞을 때 <small>(%)</small></h3>
-<div class="row">
+<div class="row p-2">
         <div class="col-lg-6">
             <label>A양(L)</label>
             <div class="input-group">
@@ -188,7 +215,7 @@
             <input id="id_5_A2" type="number" class="form-control"></div>
         </div>
     </div>
-<div class="row">
+<div class="row p-2">
         <div class="col-lg-6">
             <label>B양(L)</label>
             <div class="input-group">
@@ -200,7 +227,7 @@
             <input id="id_5_B2" type="number" class="form-control"></div>
         </div>
     </div>
-<div class="row">
+<div class="row p-2">
         <div class="col-lg-6">
             <label>C양(L)</label>
             <div class="input-group">
@@ -212,7 +239,7 @@
             <input id="id_5_C2" type="number" class="form-control"></div>
         </div>
     </div>
-<div class="row">
+<div class="row p-2">
         <div class="col-lg-6">
             <label>D양(L)</label>
             <div class="input-group">
@@ -224,23 +251,26 @@
             <input id="id_5_D2" type="number" class="form-control"></div>
         </div>
     </div>
-    <div class="row">
+    <div class="row p-2">
         <div class="col-lg-12" >
-            <br><button class="btn btn-default btn-block btn-lg" onclick=fun_5()>계산</button>
-        </div>
+            <div class="btn-group btn-block btn-lg">
+            <button class="btn btn-dark btn-block btn-lg" onclick=fun_5()>계산</button>
+        </div></div>
     </div>
-    <div class="row">
+    <div class="row p-2">
         <div class="col-lg-6">
+            <div class="card">
             <div class="card-body">
                 전체 술의 양(L) : 
                 <span id="an_5_1"></span>
-            </div>
+            </div></div>
         </div>
         <div class="col-lg-6">
+            <div class="card">
             <div class="card-body">
                 알콜 도수(%) : 
                 <span id="an_5_2"></span>
-            </div>
+            </div></div>
         </div>
     </div>
    <hr>
