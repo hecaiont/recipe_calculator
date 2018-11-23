@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from calc_rw import views
+# from brew import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index),
+    url(r'^calc_rw/', views.index),
+    url(r'^brew/', views.index),
 ]
