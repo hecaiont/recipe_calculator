@@ -1,20 +1,14 @@
-<html>
+{% extends 'brew/base.html' %}
 
-
+{% block content %}
+{% for recipe in recipes %}
     <div>
-        <h1>Recipe List</h1>
+        <hr>
+        <p>created: {{ recipe.created_date }}</p>
+        <!-- <h2><a href="{% url 'recipe_detail' pk=recipe.pk %}">{{ recipe.name }}</a></h2> -->
+        <p>{{ recipe.details|linebreaksbr }}</p>
+        <p>{{ recipe.stage|linebreaksbr }}</p>
+        <hr>
     </div>
-    
-    {% for recipe in recipes %}
-        <div>
-            <hr>
-            <p>created: {{ recipe.created_date }}</p>
-            <h2><a href="">{{ recipe.name }}</a></h2>
-            <p>{{ recipe.details|linebreaksbr }}</p>
-            <p>{{ recipe.stage|linebreaksbr }}</p>
-            <hr>
-        </div>
-    {% endfor %}
-
-
-</html>
+{% endfor %}
+{% endblock %}
