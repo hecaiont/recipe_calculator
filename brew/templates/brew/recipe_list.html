@@ -5,7 +5,7 @@
     <div>
         <hr>
         <p>created: {{ recipe.created_date }}</p>
-        <!-- <h2><a href="{% url 'recipe_detail' pk=recipe.pk %}">{{ recipe.name }}</a></h2> -->
+        <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ recipe.name }}</a></h2>
         <p>{{ recipe.details|linebreaksbr }}</p>
         <p>{{ recipe.stage|linebreaksbr }}</p>
         <hr>

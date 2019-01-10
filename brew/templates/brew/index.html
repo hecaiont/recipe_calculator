@@ -2,7 +2,8 @@
 
 <head>
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>레시피 만들기</title>
+
+    <title>술친구</title>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -11,10 +12,15 @@
 <div class="container"> 
 <div class="page-header">
     
-    <h1 class="display-5">레시피 만들기 <small>beta 1.0</small>
+    <h1 class="display-5">레시피 만들기 
       <span class="pull-right">
           <a href="/" class="btn btn-default" role="button">
-              계산기로 돌아가기
+            <div class="hidden-xs" align="center">
+                가양주 계산기 
+            </div>
+            <div class="visible-xs " align="center">
+                ㄱㄱ
+            </div>
           </a> 
       </span>
     </h1>
@@ -23,9 +29,9 @@
 </div>
 <div class="container">
 <div class="panel panel-default">
-    <div class="panel-heading">쌀과 물의 양을 계산하고 결과물의 양을 계산합니다.</div>
-    <div class="panel-heading"><small><span class="glyphicon glyphicon-plus gs"></span>를 눌러 작업을 추가하고</small>, 
-      <small><span class="glyphicon glyphicon-minus gs"></span>를 눌러 작업을 제거하시오</small></div>
+    <div class="panel-heading">쌀과 물의 양을 계산하고 결과물의 양을 계산</div>
+    <div class="panel-heading"><small><span class="glyphicon glyphicon-plus gs"></span>를 눌러 작업을 추가, </small>
+      <small><span class="glyphicon glyphicon-minus gs"></span>를 눌러 작업을 제거</small></div>
     <div class="panel-body">
     
     <div id="ingredient_filed"></div>
@@ -36,8 +42,9 @@
       </div>
 
     <div class="panel-footer">
-      <button class="btn btn-info " onclick="calculateRW()">계산</button><p class="text-center" id="expected">계산을 눌러주세요</p>
+      <button class="btn btn-default" onclick="calculateRW()">계산</button><p class="text-center" id="expected">계산을 눌러주세요</p>
     </div>
+
 
     <!-- <div class="panel-footer">
       <small><em><a href="http://">sul79.com copyright</a></em></small>

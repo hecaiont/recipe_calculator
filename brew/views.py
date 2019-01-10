@@ -19,6 +19,22 @@ def recipe_list(request):
     return render(request, 'brew/recipe_list.html', {'recipes': recipes})
 
 
-# def recipe_detail(request, pk):
-#     detail_view = get_object_or_404(recipe, pk=pk)
-#     return render(request, 'brew/recipe_detail.html', {'detail_view': detail_view})
+def recipe_detail(request, pk):
+    detail_view = get_object_or_404(recipe, pk=pk)
+    return render(request, 'brew/recipe_detail.html', {'detail_view': detail_view})
+
+
+
+from django.shortcuts import render
+from django.http import HttpResponse
+
+from django.template import loader
+
+    
+
+def index(request):
+    template = loader.get_template('brew/index.html')
+    context = {
+        'latest_question_list': "test",
+    }
+    return HttpResponse(template.render(context, request))
