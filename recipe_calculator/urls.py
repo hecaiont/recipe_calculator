@@ -22,5 +22,5 @@ from brew import views as brew_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', calc_rw_views.index),
-    url(r'^brew/', brew_views.recipe_list),
+    url(r'^brew/', brew_views.index),
 ]
