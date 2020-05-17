@@ -18,8 +18,11 @@
 <div class="container">
 <div class="page-header">
     
-
+<<<<<<< HEAD
     <h1 class="display-5">술친구 
+=======
+    <h1 class="display-5">가양주 계산기
+>>>>>>> 8914983fbb679d7793c5b4209c760e4f657966c1
         <span class="pull-right">
             <a href="/brew" class="btn btn-default" role="button">
                 <div class="hidden-xs" align="center">
